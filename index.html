@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML invoice </title>
+
+    <style>
+
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&subset=cyrillic,cyrillic-ext,latin,greek-ext,greek,latin-ext,vietnamese");
+        @import url("https://fonts.googleapis.com/css?family=Sanchez&subset=latin,latin-ext");
+
+      .invoice-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'lato', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: black;
+      }
+
+      .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+      }
+
+      #title {
+        display: inline-block;
+        background: #415472;
+        color: white;
+        font-size: 50px;
+        padding: 7px;
+        font-family: Sanchez, Serif;
+        line-height: 1em;
+        text-align: right;
+        margin-left: 400px;
+      }
+
+
+      #invoice-num{
+        display: ;
+      }
+
+      .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+      }
+
+      .invoice-box table tr td:nth-child(3) {
+        text-align: right;
+      }
+
+      .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+      }
+
+      .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+      }
+      
+
+      .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+      }
+
+      
+
+      .invoice-box table tr.heading td {
+        background: black;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        color: white;
+
+      }
+
+      .invoice-box table tr.heading th {
+        background: black;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        padding-right: 100px;
+        padding-left: 0px;
+        color: white;
+      }
+
+      .invoice-box table tr.details td {
+        padding-bottom: 20px;
+      }
+
+      
+      .invoice-box table tr.item td {
+        border-bottom: 1px solid #eee;
+      }
+      .invoice-box table tr.item th {
+        border-bottom: 1px solid #eee;
+      }
+
+
+      .invoice-box table tr.item.last td {
+        border-bottom: 1px solid #eee;
+      }
+
+      .invoice-box table tr.total td:nth-child(3) {
+        border-top: 0px solid #eee;
+        font-weight: bold;
+      }
+
+
+
+      /** RTL **/
+      .invoice-box.rtl {
+        direction: rtl;
+        font-family: open sans, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+      }
+
+      .invoice-box.rtl table {
+        text-align: right;
+      }
+
+      .invoice-box.rtl table tr td:nth-child(3) {
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="invoice-box">
+      <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+          <td colspan="3">
+            <table>
+              <tr>
+                <td class="title">
+                  <img src="http://staging2.driverjobhk.com/wp-content/uploads/2021/09/cropped-%E5%8F%B8%E6%A9%9F%E5%B7%A5-LOGO-%E9%80%80%E5%9C%B0.png" style="width: 100%; max-width: 200px" />
+                </td>
+
+                <td>
+                  <div id="title">Invoice</div>
+                  <p style="color: #858585; font-size: 13px; margin-top:5px; margin-left:400px;">Invoice Issue Date: 03/11/2021</p>
+                </td>
+
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr class="information">
+          <td colspan="3">
+            <table>
+              <tr>
+                <td>
+                  <strong>DRIVER JOB HK</strong>
+                  <p style="font-size: 14px;">227 Cobblestone Road30000 Bedrock, Cobblestone County<br />
+                  Phone: +1 780 546 2222<br />
+                  Fax: +1 780 546 2424<br />
+                  www.dinostore.bed <br />
+                  hello@dinostore.bed<br /></p>
+                <p><strong>Invoice Number:</strong> #1234</p>
+                </td>
+                <td> </td>
+
+                <td id="bill-to" style="text-align: right;">
+                  <strong>CUSTOMER NAME</strong>
+                   <p style="font-size: 14px; text-align: right: ">St Rosey lane<br />
+                  St Rose, CA 92013<br />
+                  +9770800000<br />
+                  info@example.com<br /></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+
+       
+
+
+        <tr class="heading">
+          <th>Products</th>
+
+          <th>Quantity</th>
+
+
+          <td>Price</td>
+        </tr>
+
+        <tr class="item">
+          <td>1. Unlimited CV Pack </td>
+
+          <td>1</td>
+
+          <td>$100.00</td>
+        </tr>
+
+        <tr class="item last">
+          <td>2. Starter CV Pack </td>
+
+          <td>1</td>
+
+          <td>$100.00</td>
+        </tr>
+
+
+        <tr>
+          <td></td>
+          <th><p>Sub-total :  </p> 
+            <p>Payment Method : </p>
+            <p>Total : </p>
+          </th>
+
+          <td><strong><p>$200 </p>
+           <p> Card </p>
+          <p>$200</p></strong></td>
+
+        <tr>
+          <td><strong><br/>NOTES:</strong><p style="font-size: 15px; margin-top: 5px;"> This is computer generated invoice and physical signature does not require.</p></td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td><br> <br><strong>TERM OF EMPLOYMENT</strong><p style="font-size: 15px; margin-top: 5px;"> Your employment under each contract of employment will commence on the applicable start date, and continue until validly terminated.</p></td>
+          <td></td>
+        </tr>
+
+       
+      </table>
+    </div>
+  </body>
+</html>
